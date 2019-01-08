@@ -1,7 +1,7 @@
 import resizer from 'node-image-resizer';
 import fs from 'fs';
  
-  var path = './pom/'
+  var path = './'
 
 const setup = { 
   all: {
@@ -32,4 +32,6 @@ const setup = {
      resizer(path + items[i] , setup);
     }
   });
+
+  node --experimental-modules resize-image.mjs
 */
