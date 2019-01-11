@@ -1,13 +1,13 @@
 {
-  "main.css": "/paintings/static/css/main.085e1066.chunk.css",
-  "main.js": "/paintings/static/js/main.047b6246.chunk.js",
-  "main.js.map": "/paintings/static/js/main.047b6246.chunk.js.map",
-  "static/js/1.17934efe.chunk.js": "/paintings/static/js/1.17934efe.chunk.js",
-  "static/js/1.17934efe.chunk.js.map": "/paintings/static/js/1.17934efe.chunk.js.map",
+  "main.css": "/paintings/static/css/main.f2c13d9e.chunk.css",
+  "main.js": "/paintings/static/js/main.89c52790.chunk.js",
+  "main.js.map": "/paintings/static/js/main.89c52790.chunk.js.map",
+  "static/js/1.4366d535.chunk.js": "/paintings/static/js/1.4366d535.chunk.js",
+  "static/js/1.4366d535.chunk.js.map": "/paintings/static/js/1.4366d535.chunk.js.map",
   "runtime~main.js": "/paintings/static/js/runtime~main.b91ee531.js",
   "runtime~main.js.map": "/paintings/static/js/runtime~main.b91ee531.js.map",
-  "static/css/main.085e1066.chunk.css.map": "/paintings/static/css/main.085e1066.chunk.css.map",
+  "static/css/main.f2c13d9e.chunk.css.map": "/paintings/static/css/main.f2c13d9e.chunk.css.map",
   "index.html": "/paintings/index.html",
-  "precache-manifest.53f3e98a5cd88ff8780c8cf7aa8dfef4.js": "/paintings/precache-manifest.53f3e98a5cd88ff8780c8cf7aa8dfef4.js",
+  "precache-manifest.606344fe3aa5178c85b6b4364ed8623a.js": "/paintings/precache-manifest.606344fe3aa5178c85b6b4364ed8623a.js",
   "service-worker.js": "/paintings/service-worker.js"
 }

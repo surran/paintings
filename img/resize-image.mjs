@@ -1,7 +1,7 @@
 import resizer from 'node-image-resizer';
 import fs from 'fs';
  
-  var path = './'
+  var path = './pom/'
 
 const setup = { 
   all: {
