@@ -7,9 +7,9 @@ class Media extends Component {
   }
 
   render() {
-    let data = {title:"Media",
+    let data2017 = {title:"Media coverage of Events",
         c1:[{type:'separator',
-             text:"Press Releases",
+             text:"Press Releases in 2017",
              src:"", 
              link:""},           
             {type:'card',
@@ -28,8 +28,24 @@ class Media extends Component {
            ]
       }
 
+    let data2016 = {title:"",
+        c1:[{type:'separator',
+             text:"Press Releases in 2016",
+             src:"", 
+             link:""},           
+            {type:'card',
+             text:"Dainik Jagran (p. nov 27, 2016)",
+             src:"img/pom/media2016.jpg", 
+             link:""}
+           ],
+        c2:[]
+      }
+
     return (
-          <PictureCollection data={data}/>
+      <div>
+          <PictureCollection data={data2017}/>
+          <PictureCollection data={data2016}/>
+      </div>
     );
   }
 }

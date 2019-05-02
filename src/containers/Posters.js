@@ -7,26 +7,26 @@ class Posters extends Component {
   }
 
   render() {
-    let data = {title:"Posters",
+    let data = {title:"Posters of Past & upcoming events",
         c1:[{type:'PictureCard',
-             text:"The exhibtion had on display a total of 29 paintings and was held in the month of November 2016",
-             src:"img/posters/utsav2.png", 
+             text:"Utsav opening poster. Upcoming exhibition to be held in Bengaluru, 2019",
+             src:"img/posters/utsav1.png", 
              link:""},
             {type:'PictureCard',
-             text:"The exhibtion had on display a total of 29 paintings and was held in the month of November 2016",
+             text:"17 Paintings main poster. This exhibtion was held in Shimla, 2017",
              src:"img/posters/17paintings.jpg", 
              link:""},
             {type:'PictureCard',
-             text:"The exhibtion had on display a total of 29 paintings and was held in the month of November 2016",
+             text:"Painter to Melodies event poster. This exhibtion was held in Shimla, 2016",
              src:"img/posters/pom.jpg", 
              link:""}
            ],
         c2:[{type:'PictureCard',
-             text:"The exhibtion had on display a total of 29 paintings and was held in the month of November 2016",
-             src:"img/posters/utsav1.png", 
+             text:"Utsav event poster. Upcoming exhibition to be held in Bengaluru, 2019",
+             src:"img/posters/utsav2.png", 
              link:""},
              {type:'PictureCard',
-             text:"The exhibtion had on display a total of 29 paintings and was held in the month of November 2016",
+             text:"Painter to Melodies main poster. This exhibtion was held in Shimla, 2016",
              src:"img/posters/pom1.jpg", 
              link:""}
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ImageItem from '../items/ImageItem'
+import styled from 'styled-components';
 
 let column1 = {   float: "left",
     fontWeight: "100",
@@ -23,12 +25,12 @@ class PictureCollection extends Component {
     let style = {};
     if (item.type == "PictureCard") style = {textDecoration:"none", color:"black"}
     return(
-         <React.Fragment>
+         <React.Fragment key={idx}>
            {(item.type == "PictureCard") &&
             <React.Fragment>
               <p>
-                <a href={item.link} target="blank" style={{...style}}>
-                  <img style={{width:"100%", marginTop:"10px"}} src={item.src} />
+                <a style={{...style}}>
+                  <ImageItem style={{width:"100%", marginTop:"10px"}} src={item.src} desc={item.text}/>
                   <br/>{item.text}<br/>
                   
                 </a>
@@ -38,9 +40,9 @@ class PictureCollection extends Component {
            {(item.type == "card") &&
             <React.Fragment>
               <p>
-                <a href={item.link} target="blank" style={{...style}}>
+                <a style={{...style}}>
                   <br/>{item.text}<br/>
-                  <img style={{width:"100%", marginTop:"10px"}} src={item.src} />            
+                  <ImageItem style={{width:"100%", marginTop:"10px"}} src={item.src} desc={item.text} />            
                 </a>
               </p>
               {(idx !== length - 1) && <hr/>}
@@ -71,14 +73,20 @@ class PictureCollection extends Component {
                 <header>
                   <h1>{data.title}</h1>
                 </header>
-                <div style={{...column1}} align="justify">
-                  
+                <DoubleColumn>
+                  <div style={{...column1}} align="justify">          
                     {c1}                    
-                 </div>
-                
-                 <div style={{...column2}} align="justify">
+                  </div>              
+                  <div style={{...column2}} align="justify">
                    {c2}  
-                 </div>
+                  </div>
+                </DoubleColumn>
+                <SingleColumn>
+                    
+                    {c1}
+                    {c2}                     
+
+                </SingleColumn>
               </div>
             </div>
     );
@@ -89,3 +97,19 @@ class PictureCollection extends Component {
 
 export default PictureCollection;
  
+const SingleColumn = styled.div`
+  font-weight: 100;
+  width: 100%;
+  font-size: 13px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  @media (min-width: 768px) {
+    display:none;
+  }
+`
+
+const DoubleColumn = styled.div`
+  @media (max-width: 768px) {
+    display:none;
+  }
+`

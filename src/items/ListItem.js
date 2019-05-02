@@ -8,12 +8,14 @@ class ListItem extends Component {
   }
 
   render() {
-    let match = this.props.location.pathname == this.props.link
+    let match = this.props.location.pathname == "/" + this.props.link
     if (this.props.default && this.props.location.pathname == "/") {match = true;}
-    let color = match ? "maroon" : "inherit"
+    let bgColor = match ? "maroon" : "inherit"
+    let fgColor = match ? "white" : "inherit"
+
     return (
-      <Link to={this.props.link} style={{textDecoration: "none",  color:"#f5f5f5"}}>
-        <li style={{padding:"10px 25px", color:"#f5f5f5", backgroundColor: color, cursor:"pointer"}}>     
+      <Link onClick={this.props.closeMenu} to={this.props.link} style={{textDecoration: "none", color:"inherit"}}>
+        <li style={{padding:"10px 25px", color:"inherit", backgroundColor: bgColor, color: fgColor, cursor:"pointer"}}>     
           <span style={{fontSize:"13px"}}>{this.props.title}</span>
           <br/>
           <i><span style={{fontSize:"11px"}}>{this.props.subtitle}</span></i>
