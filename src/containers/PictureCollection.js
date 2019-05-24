@@ -103,7 +103,7 @@ const SingleColumn = styled.div`
   font-size: 13px;
   box-sizing: border-box;
   padding-right: 10px;
-  @media (min-width: 768px) {
+  @media (min-width: 767px) {
     display:none;
   }
 `

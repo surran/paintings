@@ -140,7 +140,7 @@ const MobileMenu = styled.div`
     top:60px;
     width:100%;
     color:gray;
-  @media (min-width: 768px) {
+  @media (min-width: 767px) {
     display:none
   }
 `;
@@ -164,7 +164,7 @@ const MenuIcon = styled.svg`
   position: absolute;
   top: 20px;
   right: 5px;
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     display:none
   }
 `
