@@ -38,6 +38,7 @@ class CommentBook extends Component {
     let exhibitionText = "Exhibition: " + details.exhibition
     let venueText = "Venue: " + details.venue
     let dateText = "Date: " + details.date
+    const prefix = "postcard_"
     let imageSrc = details.src
     return (
       <React.Fragment>

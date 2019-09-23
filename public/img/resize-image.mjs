@@ -6,6 +6,7 @@ import fs from 'fs';
   var path = './posters/'
   var path = './17Paintings/'
   var path = './associations/'
+  var path = './commentBook/'
 
 const setup = { 
   all: {
