@@ -7,7 +7,7 @@ class CategoryItem extends Component {
 
   render() {
     return (
-      <li style={{padding:"10px", color:"gray"}}>     
+      <li style={{padding:"10px", color:"#212121", fontSize: "18px"}}>     
          {this.props.title}<br/><i>{this.props.subtitle}</i>
       </li>
     );

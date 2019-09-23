@@ -5,6 +5,7 @@ import Utsav from './containers/Utsav'
 import Pom from './containers/Pom'
 import Media from './containers/Media'
 import Posters from './containers/Posters'
+import CommentBook from './containers/CommentBook'
 import About from './containers/About'
 import Books from './containers/Books'
 import Collections from './containers/Collections'
@@ -13,12 +14,45 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import styled from 'styled-components';
 
+const IMAGEPATHS = [
+"img/commentBook/2.JPG",
+"img/commentBook/3.JPG",
+ "img/commentBook/4.JPG",
+ "img/commentBook/5.JPG",
+ "img/commentBook/6.JPG",
+ "img/commentBook/7.JPG",
+ "img/commentBook/8.JPG",
+ "img/commentBook/9.JPG",
+ "img/commentBook/10.JPG",
+ "img/commentBook/11.JPG",
+ "img/commentBook/12.JPG",
+ "img/commentBook/13.JPG",
+ "img/commentBook/14.JPG",
+ "img/commentBook/15.JPG",
+ "img/commentBook/16.JPG",
+ "img/commentBook/17.JPG",
+ "img/commentBook/18.JPG",
+ "img/commentBook/19.JPG",
+ "img/commentBook/20.JPG",
+ "img/commentBook/21.JPG",
+ "img/commentBook/22.JPG",
+ "img/commentBook/23.JPG",
+ "img/commentBook/24.JPG",
+ "img/commentBook/25.JPG",
+ "img/commentBook/26.JPG",
+ "img/commentBook/27.JPG",
+ "img/commentBook/28.JPG",
+ "img/commentBook/29.JPG",
+ "img/commentBook/30.JPG"
+]
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {menu:false};
+    this.state = {menu:false, commentBookOpen:false};
     this.toggleMenu = this.toggleMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
+    this.openCommentBook = this.openCommentBook.bind(this)
   }
 
   toggleMenu(){
@@ -39,6 +73,11 @@ class App extends Component {
    // this.scrollbar.scrollTop(0);
   }
 
+  openCommentBook()
+  {
+    this.setState({commentBookOpen: !this.state.commentBookOpen})
+  }
+
 
   render() {
     let homeDir = ""
@@ -51,6 +90,9 @@ class App extends Component {
         {/* Header */}
         <div style={{height:"60px", width:"100%", backgroundColor:"white", boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 4px", zIndex:"10", position:"fixed"}}>
           <img style={{width:"200px", marginTop:"-35px"}} src= "img/sign_yellow.png"/>
+          <CommentBookIcon onClick={this.openCommentBook}>
+            <img src="img/comment.png" style={{width: "30px", padding: "0px 10px", verticalAlign: "middle", transform: "translateY(-2px)"}}/>Comment Book
+          </CommentBookIcon>
           <MenuIcon onClick={this.toggleMenu}>
             <rect x="0" y="0" height="4" width="25" fill="maroon"></rect>
             <rect x="0" y="7" height="4" width="25" fill="maroon"></rect>
@@ -59,42 +101,47 @@ class App extends Component {
         </div>
 
         {/* Body */}
-        <div style={{margin:"auto", textAlign:"center"}}>     
-        <div style={{margin:" 0 auto"}}>     
-          
-          {/* Menu */}
-          {(this.state.menu) &&
-            <MobileMenu>
-               <MenuItems closeMenu={this.closeMenu}/>
-            </MobileMenu>
-          }
-          <DesktopMenu>
-            <MenuItems closeMenu={this.closeMenu}/>
-          </DesktopMenu>
-          {/* Showcase */}    
-          {(!this.state.menu) &&    
-            <Showcase>
-              <div style={{textAlign:"center" , backgroundColor:"", height:"100%", overflow:"hidden"}}>
-                 <div ref={ scrollbar => { this.scrollbar = scrollbar } }
-                             style={{ width:"100%", height: "100%" }}>
-                  <div id="showcase" style={{ width:"calc(100% - 20px)", height: "100%", margin:"10px"}}>     
-                   <Route path={homeDir + "/17paintings"} exact component={A17Paintings} />
-                   <Route path={homeDir + "/utsav"} component={Utsav} />
-                   <Route path={homeDir + "/painter-to-melodies"} component={Pom} />
-                   <Route path={homeDir + "/posters"} component={Posters} />
-                   <Route path={homeDir + "/print-media"} component={Media} />
-                   <Route path={homeDir + "/associations"} component={Associations} />
-                   <Route path={homeDir + "/collections"} component={Collections} />
-                   <Route path={homeDir + "/"} exact component={Utsav} />
-                   <Route path={homeDir + "/about"} component={About} />
-                   <Route path={homeDir + "/books"} component={Books} />
+        {(this.state.commentBookOpen) ? (
+          <CommentBook imagePath={IMAGEPATHS} closeCommentBook={() => {this.setState({commentBookOpen:false})}}/>
+        ) : (
+          <div style={{margin:"auto", textAlign:"center"}}>     
+            <div style={{margin:" 0 auto"}}>     
+              
+              {/* Menu */}
+              {(this.state.menu) &&
+                <MobileMenu>
+                   <MenuItems closeMenu={this.closeMenu} openCommentBook={this.openCommentBook} isMobile={true}/>
+                </MobileMenu>
+              }
+              <DesktopMenu>
+                <MenuItems closeMenu={this.closeMenu}/>
+              </DesktopMenu>
+              {/* Showcase */}    
+              {(!this.state.menu) &&    
+                <Showcase>
+                  <div style={{textAlign:"center" , backgroundColor:"", height:"100%", overflow:"hidden"}}>
+                     <div ref={ scrollbar => { this.scrollbar = scrollbar } }
+                                 style={{ width:"100%", height: "100%" }}>
+                      <div id="showcase" style={{ width:"calc(100% - 20px)", height: "100%", margin:"10px"}}>     
+                       <Route path={homeDir + "/17paintings"} exact component={A17Paintings} />
+                       <Route path={homeDir + "/utsav"} component={Utsav} />
+                       <Route path={homeDir + "/painter-to-melodies"} component={Pom} />
+                       <Route path={homeDir + "/posters"} component={Posters} />
+                       <Route path={homeDir + "/print-media"} component={Media} />
+                       <Route path={homeDir + "/associations"} component={Associations} />
+                       <Route path={homeDir + "/collections"} component={Collections} />
+                       <Route path={homeDir + "/"} exact component={Utsav} />
+                       <Route path={homeDir + "/comments"} exact component={Utsav} />
+                       <Route path={homeDir + "/about"} component={About} />
+                       <Route path={homeDir + "/books"} component={Books} />
+                      </div>
+                     </div>
                   </div>
-                 </div>
-              </div>
-            </Showcase>
-          }
-          </div>
-        </div>
+                </Showcase>
+              }
+            </div>
+          </div>)
+        }
       </div>
       </Router>
     );
@@ -110,11 +157,11 @@ const DesktopMenu = styled.div`
     text-align:left;
     z-index:1;
     width:200px;
-    background-color:#aaaaaa;
-    
+    border-right: 1px solid rgba(0,0,0,.12);
+
     margin: 0px;
     top:60px;
-    color:#f5f5f5;
+    color:#616161;
   @media (max-width: 768px) {
    display:none
     
@@ -166,5 +213,18 @@ const MenuIcon = styled.svg`
   right: 5px;
   @media (min-width: 769px) {
     display:none
+  }
+`
+const CommentBookIcon = styled.div`
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 18px; 
+  float: right;
+  margin-right: 80px;
+  font-size: 18px;
+  color: #212121;
+  font-weight: normal;
+   @media (max-width: 768px) {
+    display:none;
   }
 `

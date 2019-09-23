@@ -7,7 +7,7 @@ class Pom extends Component {
   }
 
   render() {
-   let  desc = "Photograhs from the event Painter to Melodies (Shimla, nov 2017)."
+   let  desc = "Photograhs from the event Painter to Melodies (Shimla, nov 2016)."
     return (
 
           <div style={{width:"calc(100%- 20px)", margin:"0px", overflow:"auto", padding:"10px" }}>
