@@ -15,7 +15,7 @@ class About extends Component {
               <ImageItem src="img/ranjan.jpg" style={{width:"100%"}} desc="Surya Ranjan Shandil (born 1986) is an Indian artist based in Bengaluru, India."/>
               <div style={{padding:"50px 15%"}}>
               <p>
-                Surya Ranjan Shandil (born 1986) is an Indian artist based in Bengaluru, India. He completed schooling in Shimla, India and attended IIT Kanpur for a bachelor's degree in Technology. He is a self taught artist. He has held a few  exhibitions his works in his hometown Shimla. 
+                Based in Bengaluru, artist Surya Ranjan Shandil brings many worlds into one: A person self taught in art, science  & technology, who believes in the mantra of self reliance. Representative of his background and views, it is no wonder that the underlying theme of his art is "multiplicity". 
                 </p>
                </div>
             </div>

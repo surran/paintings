@@ -16,7 +16,11 @@ class MenuItems extends Component {
     return (
 
            <ul style={{listStyleType:"none", margin:"20px 0px", padding:"0px"}}>
-              <CategoryItem title={c("Surya Ranjan Shandil")} />
+              <div style={{textAlign: "center"}}>
+                <img src="/img/me.jpg" style={{width: "100px"}}/>
+              
+              <CategoryItem title={c("Surya Ranjan Shandil")} style={{paddingTop: "3px", fontSize:"15px"}}/>
+              </div>
               <ListItem title={c("About")} subtitle="" link="about"  closeMenu={this.props.closeMenu}/>
               <ListItem title={c("Books")} subtitle="" link="books"  closeMenu={this.props.closeMenu}/>
               {this.props.isMobile && 
