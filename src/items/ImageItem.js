@@ -35,7 +35,7 @@ class ImageItem extends Component {
               <span style={{position:"fixed", width:"100%", height: "100%", top:"0px", left: "0px", backgroundColor:"black", opacity:"0.75", zIndex:"20"}}>
               </span>
               <ImageFrame>
-                <img  src={imagePath} style={{width:"calc(100% - 20px)", maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "730px"}}/>
+                <img  src={imagePath} style={{width:"calc(100% - 20px)", maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "calc(100% - 50px)"}}/>
                 <span style ={{marginLeft:"10px"}}>{this.props.desc}</span>
               </ImageFrame>
               <svg onClick={()=> this.CloseModal()} height="20" width="20" data-radium="true" style={{zIndex:"40", position: "fixed", cursor: "pointer", top: "15px", right: "15px"}}>
@@ -52,6 +52,7 @@ class ImageItem extends Component {
 
 const ImageFrame = styled.span`
   height:800px; 
+  max-height: calc(100% - 60px);
   width:100%;
   max-width:1220px;
   left:calc(50% - 610px);
