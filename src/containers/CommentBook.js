@@ -40,12 +40,15 @@ class CommentBook extends Component {
     let dateText = "Date: " + details.date
     const prefix = "postcard_"
     let imageSrc = details.src
+    const transcript = this.props.transcriptPath[this.state.imageIndex]
+    const showTranscript = false; // transcript && document.getElementsByTagName("body")[0].clientWidth > 1240
     return (
       <React.Fragment>
               <span style={{position:"fixed", width:"100%", height: "100%", top:"0px", left: "0px", backgroundColor:"black", opacity:"0.75", zIndex:"20"}}>
               </span>
               <ImageFrame>
-                <img  src={this.props.imagePath[this.state.imageIndex]} style={{width:"calc(100% - 20px)", maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "730px"}}/>
+                <img  src={this.props.imagePath[this.state.imageIndex]} style={{width: (showTranscript ? "calc(50% - 10px)" : "calc(100% - 20px)"), maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "calc(100% - 52px)"}}/>
+                {showTranscript  && <div style={{width: "calc(50% - 10px)",fontFamily: "Monospace", fontSize: "1.60vh", float: "right",marginTop:"60px", display: "inline-block"}}dangerouslySetInnerHTML={{ __html: transcript}}></div>}
                 <span style ={{marginLeft:"10px"}}>{this.props.desc}</span>
                 <div style={{position:"fixed", top:"40%", right:"10px", width:"50px", height:"50px", backgroundColor:"silver", borderRadius:"25px", cursor:"pointer", "opacity": ".8" }}
                    onClick = {()=> {this.nextImage()}}>
@@ -81,6 +84,7 @@ class CommentBook extends Component {
 
 const ImageFrame = styled.span`
   height:800px; 
+  max-height: calc(100% - 60px);
   width:100%;
   max-width:1220px;
   left:calc(50% - 610px);
@@ -96,6 +100,7 @@ const ImageFrame = styled.span`
     overflow: auto;
     top: 0px;
     padding-top: 35px;
+    max-height: calc(100% - 35px);
   }
 `;
 

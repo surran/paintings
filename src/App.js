@@ -8,6 +8,7 @@ import Posters from './containers/Posters'
 import CommentBook from './containers/CommentBook'
 import About from './containers/About'
 import Books from './containers/Books'
+import { TRANSCRIPTPATHS } from './data/transcriptsData'
 import Collections from './containers/Collections'
 import  Associations from './containers/Associations'
 import { BrowserRouter as Router, Route} from "react-router-dom";
@@ -102,7 +103,7 @@ class App extends Component {
 
         {/* Body */}
         {(this.state.commentBookOpen) ? (
-          <CommentBook imagePath={IMAGEPATHS} closeCommentBook={() => {this.setState({commentBookOpen:false})}}/>
+          <CommentBook imagePath={IMAGEPATHS} transcriptPath={TRANSCRIPTPATHS} closeCommentBook={() => {this.setState({commentBookOpen:false})}}/>
         ) : (
           <div style={{margin:"auto", textAlign:"center"}}>     
             <div style={{margin:" 0 auto"}}>     
