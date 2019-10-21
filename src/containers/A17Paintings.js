@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
-
-let column1 = {   float: "left",
-    fontWeight: "100",
-    width: "50%",
-    fontSize: "13px",
-    boxSizing: "border-box",
-    paddingRight: "10px"
-}
-
-let column2 = {   float: "left",
-    fontWeight: "100",
-    width: "calc(50% - 15px)",
-    fontSize: "13px",
-}
+import styled from 'styled-components';
 
 class A17Paintings extends Component {
   constructor(props) {
@@ -29,7 +16,7 @@ class A17Paintings extends Component {
                   <h1>17 Paintings</h1>
                   <p>An Overview</p>
                 </header>
-                <div style={{...column1}} align="justify">
+                <Column1>
                   <p>On the evening of 10<sup>th</sup> December 2017, the exhibition <b>17&nbsp;Paintings</b> came to a successful conclusion.</p>
 
                   <p>
@@ -51,9 +38,9 @@ class A17Paintings extends Component {
                   All in all, the wonderful turnout and interaction made the event a great success. This was my second solo exhibition at Gaiety.</p>
                   <p>The exhibtion catalogue is available online on the link: <a href="../2017" target="blank">www.suryaranjanshandil.com/2017</a></p>
                   <br/><br/>
-                 </div>
+                 </Column1>
                 
-                 <div style={{...column2}}>
+                 <Column2>
                      <div style={{fontSize:"16px", background:"#eeeeff", padding:"10px"}}>Press Releases</div><p>
                      <a>Himachal Watcher (p. dec 7, 2017)<br/>
                        <ImageItem style={{width:"100%"}}  src="img/17Paintings/hw.png" desc="Himachal Watcher (p. dec 7, 2017)"
@@ -63,13 +50,37 @@ class A17Paintings extends Component {
                      <p><a target="blank">Divya Himachal (p. dec 10, 2017)<br/><br/><ImageItem style={{width:"100%"}} desc="Divya Himachal (p. dec 10, 2017)" src="img/17Paintings/dj.JPG" /></a></p>
                      <hr/>
                      <p><a target="blank">Dainik Bhaskar (p. dec 10 and 11, 2017)<br/><br/><ImageItem style={{width:"100%"}} desc="Dainik Bhaskar (p. dec 10 and 11, 2017)" src="img/17Paintings/np.JPG" /></a></p>
-                 </div>
+                 </Column2>
               </div>
             </div>
     );
   }
 }
 
+
+const Column1 = styled.div`
+  font-weight: 100;
+  width: 50%;
+  font-size: 13px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  text-align: justify;
+  display:inline-block;
+  @media (max-width: 767px) {
+    width:100%;
+    padding-right: 0px;
+  }
+`
+
+const Column2 = styled.div`
+  font-weight: 100;
+  width: calc(50% - 15px);
+  font-size: 13px;
+  float:right;
+  @media (max-width: 767px) {
+    width:100%;
+  }
+`
 
 
 export default A17Paintings;
