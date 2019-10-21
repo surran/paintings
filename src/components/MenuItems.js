@@ -31,11 +31,11 @@ class MenuItems extends Component {
               <CategoryItem title={c("Exhibitions")} />
               <ListItem title={c("Utsav")} subtitle={c("Bengaluru 2019")} link="utsav" closeMenu={this.props.closeMenu}/>
               <ListItem title={c("17 Paintings")} subtitle={c("Shimla 2017")} link="17paintings"  closeMenu={this.props.closeMenu}/>
-              <ListItem title={c("Painter to Melodies")} subtitle={c("Shimla 2016")} link="painter_to_melodies" closeMenu={this.props.closeMenu}/>
+              <ListItem title={c("Painter to Melodies")} subtitle={c("Shimla 2016")} link="painterToMelodies" closeMenu={this.props.closeMenu}/>
               <hr style={{borderTop:"1px solid rgba(0,0,0,.12)", borderBottom:"none"}}/>
               <CategoryItem title={c("Outreach")} />
               <ListItem title={c("Posters")} subtitle="" link="posters" closeMenu={this.props.closeMenu}/>
-              <ListItem title={c("Print Media")} subtitle="" link="print_media" closeMenu={this.props.closeMenu}/>
+              <ListItem title={c("Print Media")} subtitle="" link="printMedia" closeMenu={this.props.closeMenu}/>
               <ListItem title={c("Associations")} subtitle="" link="associations" closeMenu={this.props.closeMenu}/>
               <CategoryItem title={c("Contact")} subtitle="+91 90962 96411 suryaran@gmail.com" closeMenu={this.props.closeMenu} />
             </ul>

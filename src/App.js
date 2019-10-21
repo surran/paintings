@@ -131,9 +131,9 @@ class App extends Component {
                       <div id="showcase" style={{ width:"calc(100% - 20px)", height: "100%", margin:"10px"}}>     
                        <Route path={homeDir + "/17paintings"} exact component={A17Paintings} />
                        <Route path={homeDir + "/utsav"} component={AUtsav} />
-                       <Route path={homeDir + "/painter_to_melodies"} component={Pom} />
+                       <Route path={homeDir + "/painterToMelodies"} component={Pom} />
                        <Route path={homeDir + "/posters"} component={Posters} />
-                       <Route path={homeDir + "/print_media"} component={Media} />
+                       <Route path={homeDir + "/printMedia"} component={Media} />
                        <Route path={homeDir + "/associations"} component={Associations} />
                        <Route path={homeDir + "/collections"} component={Collections} />
                        <Route path={homeDir + "/"} exact component={About} />
