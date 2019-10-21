@@ -57,7 +57,7 @@ class CommentBook extends Component {
               <span style={{position:"fixed", width:"100%", height: "100%", top:"0px", left: "0px", backgroundColor:"black", opacity:"0.75", zIndex:"20"}}>
               </span>
               <ImageFrame>
-                <img  src={this.props.imagePath[imageIndex]} style={{width: (showTranscript ? "calc(50% - 10px)" : "calc(100% - 20px)"), maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "calc(100% - 52px)"}}/>
+                <img  src={this.props.imagePath[imageIndex]} style={{float:(showTranscript ? "left" : "unset"), width: (showTranscript ? "calc(50% - 10px)" : "calc(100% - 20px)"), maxWidth:"1200px", margin:"10px", objectFit: "contain", maxHeight: "calc(100% - 52px)"}}/>
                 {showTranscript  && <div style={{width: "calc(50% - 10px)",fontFamily: "Monospace", fontSize: "1.60vh", float: "right",marginTop:"60px", display: "inline-block"}}dangerouslySetInnerHTML={{ __html: transcript}}></div>}
                 {false  && <div style={{width: "calc(100% - 20px)", margin: "10px", textAlign: "center"}}><div style={{margin: "auto", fontFamily: "Monospace", fontSize: "1.60vw", textAlign: "left",marginTop:"60px", display: "inline-block"}}dangerouslySetInnerHTML={{ __html: transcript}}></div></div>}
                 <span style ={{marginLeft:"10px"}}>{this.props.desc}</span>
