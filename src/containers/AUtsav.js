@@ -18,24 +18,24 @@ class AUtsav extends Component {
                   <p>An Overview</p>
                 </header>
                 <Column1 align="justify">
-                  <p>On 14<sup>th</sup> October 2019, the three day long painting exhibition UTSAV came to a successful conclusion.
+                  <p>On 14<sup>th</sup> Oct. 2019, the three day painting exhibition UTSAV came to a successful conclusion.
                   </p>
                   <p>
-                  The exhibition was held in Rangoli Metro Art centre, which is one among Bengaluru's major cultural spaces for hosting such events. During all three days, the venue brimmed with activity, as multiple events in art, architecture and photography ran alongside each other.
+                  The exhibition was held in Rangoli Metro Art Center, one of Bengaluru's major cultural spaces for such events. During all three days, the venue brimmed with activity, as multiple shows in architecture, painting and photography ran alongside each other.
                   </p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/i1.jpg"/></a>
                   <p>
-                  Metro complex authorities also helped in marketing the exhibition by sharing its posters, photos and other info on their official Instagram, Facebook and Twitter handles.
-                  </p>
+                  The happenings were also relayed online on the Art Center's official Instagram, Facebook and Twitter channels. 
+                   </p>
                   <p>
-                  In the exhibition hall, the paintings on display were a mix of two different painting styles. The more stylised audience connected well with 'blocks of color' paintings.
+                  UTSAV was my third solo exhibition. The paintings put on display were a mix of two different styles. Catering to the more stylised audience were 'Patterns of Color' paintings.
                   </p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/blocks_of_color.jpg"/></a>
                   <p>
-                  These paintings depicted cultural themes in well balanced patterns of flat color and distinct form.
+                  These paintings depicted cultural themes in balanced aggregations of flat colored forms.
                   </p>
                   <p>
-                  A discreet departure from these, were another set of paintings, executed to appeal an audience with more conventional tastes. These paintings also depicted cultural themes, but in a closer to life manner characterised by artistically casual brushwork.
+                  A discreet departure from these, were another set of paintings, executed to appeal an audience with more conventional tastes. These paintings also depicted cultural themes, but in a closer to life manner characterised by casual brushwork.
                   </p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/casual_brush.jpg"/></a>
                   <p>
@@ -44,12 +44,12 @@ class AUtsav extends Component {
                   <p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/i10.jpg"/></a>
                   
-                  Audience gelled well with the artworks. The <Link to="/comments">Comment Book</Link> saw some very nice comments of appreciation. Among the visitors, the younger ones especially were keen on getting information on future exhibitions. A good number of people shared their email addresses in the 'Subscribe' sheet.
+                  The audience was generous in their comments. Some also wrote nice words of appriciation in the <Link to="/comments/29">Comment Book</Link>. The younger visitors were keen on getting information on future exhibitions. A good number of people shared their email addresses in the 'Subscribe' sheet.
                   </p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/i8.jpg"/></a>
 
                   <p>
-                  The Collection of Works (2010-17) book also drew curious attention. Numerous people leafed through it. Many also made sure to collect the exhibitor's visiting card for future reference.
+                  The Collection of Works (2010-17) book also drew curious attention. Numerous people leafed through it. Many also made sure to collect my visiting card for future reference.
                   </p>
                   <p>
                   <a target="blank"><ImageItem style={{width:"100%"}} src="img/utsav/i7.jpg"/></a>

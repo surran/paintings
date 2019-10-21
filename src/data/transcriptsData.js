@@ -1260,13 +1260,13 @@ It's really amazing .
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-Vin
 </p>
 <br/>
-<p>Wonderful art work, whole hartedly appricite the artists and
+<p>Wonderful art work, whole heartedly appricite the artists and
   <br />
-  all the core focues of this beautiful place and side walk
+  all the core focuses of this beautiful place and side walk
   <br />
   Gallery
   <br />
-  &nbsp; &nbsp; &nbsp; &nbsp; Thank you. best wishs and warm regards
+  &nbsp; &nbsp; &nbsp; &nbsp; Thank you. best wishes and warm regards
 </p>
 <p>Chundan Vallam is awesome - &nbsp; Mahalakshmi
 </p>
@@ -1292,7 +1292,7 @@ It's really amazing .
 <br />
 <p>- Realy its beautiful. I am hats off to Ranjan
   <br />
-  &nbsp;&nbsp; &nbsp;thankQ your efferts
+  &nbsp;&nbsp; &nbsp;thankQ your efforts
 </p>
 <p>
   <br />
