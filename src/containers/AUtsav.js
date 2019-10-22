@@ -95,6 +95,7 @@ const Column1 = styled.div`
   display:inline-block;
   @media (max-width: 767px) {
     width:100%;
+    font-weight: normal;
     padding-right: 0px;
   }
 `
@@ -106,6 +107,7 @@ const Column2 = styled.div`
   float:right;
   @media (max-width: 767px) {
     width:100%;
+    font-weight: normal;
   }
 `
 

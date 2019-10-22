@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
+import styled from 'styled-components';
 
 class Pom extends Component {
   constructor(props) {
@@ -12,18 +13,27 @@ class Pom extends Component {
 
           <div style={{width:"calc(100%- 20px)", margin:"0px", overflow:"auto", padding:"10px" }}>
             <header><h1>Painter to Melodies</h1></header>
-            <div style={{padding:"10px", fontSize: "13px", fontWeight: "100"}} align="justify">
+            <Container>
               <ImageItem src="img/pom/pom.jpg" style={{width:"100%"}} desc={desc}/>
               <span style={{fontSize:"12px"}}>{desc}</span>
               <div style={{padding:"50px 25%"}}>
               <p>The exhibtion had on display a total of 29 paintings.</p>
               </div>
-            </div>
+            </Container>
           </div>
     );
   }
 }
 
+const Container = styled.div`
+  font-weight: 100;
+  font-size: 13px;
+  padding: 10px;
+  text-align: justify;
+  @media (max-width: 767px) {
+    font-weight: normal;
+  }
+`
 
 
 export default Pom;

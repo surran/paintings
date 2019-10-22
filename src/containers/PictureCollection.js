@@ -98,7 +98,7 @@ class PictureCollection extends Component {
 export default PictureCollection;
  
 const SingleColumn = styled.div`
-  font-weight: 100;
+  font-weight: normal;
   width: 100%;
   font-size: 13px;
   box-sizing: border-box;
