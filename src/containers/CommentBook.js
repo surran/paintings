@@ -83,7 +83,7 @@ class CommentBook extends Component {
                   &nbsp;&nbsp;{pageText}&nbsp;&nbsp;|<span style={{color:"#8888bb"}}>&nbsp;&nbsp;{exhibitionText}&nbsp;&nbsp;&nbsp;&nbsp;{venueText}&nbsp;&nbsp;&nbsp;&nbsp;{dateText}</span>
                 </div>
               </ImageFrame>
-              <svg onClick={()=> this.props.history.push("/")} height="20" width="20" data-radium="true" style={{zIndex:"40", position: "fixed", cursor: "pointer", top: "15px", right: "15px"}}>
+              <svg onClick={()=> {this.props.closeCommentBook(); return this.props.history.push("/")}} height="20" width="20" data-radium="true" style={{zIndex:"40", position: "fixed", cursor: "pointer", top: "15px", right: "15px"}}>
                 <polyline points="0,0 20,20 10,10 20,0 0,20" data-radium="true" style={{fill: "none", stroke: "rgb(224, 224, 224)", strokeWidth: "3"}}>
                 </polyline>
               </svg>

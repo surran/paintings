@@ -59,6 +59,7 @@ class App extends Component {
     this.toggleMenu = this.toggleMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
     this.openCommentBook = this.openCommentBook.bind(this)
+    this.closeCommentBook = this.closeCommentBook.bind(this)
   }
 
   toggleMenu(){
@@ -84,6 +85,11 @@ class App extends Component {
     this.setState({commentBookOpen: !this.state.commentBookOpen})
   }
 
+  closeCommentBook()
+  {
+    this.setState({commentBookOpen: false})
+  }
+
 
   render() {
     let homeDir = ""
@@ -105,7 +111,7 @@ class App extends Component {
             <rect x="0" y="14" height="4" width="25" fill="maroon"></rect>
           </MenuIcon>
         </div>
-        <Route path={homeDir + "/comments"} component={() =>(<CommentBook imagePath={IMAGEPATHS} transcriptPath={TRANSCRIPTPATHS} closeCommentBook={() => {window.location.href = "/"}}/>)} />
+        <Route path={homeDir + "/comments"} component={() =>(<CommentBook imagePath={IMAGEPATHS} transcriptPath={TRANSCRIPTPATHS} closeCommentBook={this.closeCommentBook}/>)} />
         {/* Body */}
         {(this.state.commentBookOpen) ? (<div></div>
           
