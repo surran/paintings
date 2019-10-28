@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PictureCollection from "./PictureCollection"
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class Media extends Component {
   constructor(props) {
@@ -43,6 +45,7 @@ class Media extends Component {
 
     return (
       <div>
+          <SiteHelmet page={this.props.location}/>
           <PictureCollection data={data2017}/>
           <PictureCollection data={data2016}/>
       </div>
@@ -52,5 +55,5 @@ class Media extends Component {
 
 
 
-export default Media;
+export default withRouter(Media);
  

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PictureCollection from "./PictureCollection"
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class Associations extends Component {
   constructor(props) {
@@ -21,12 +23,15 @@ class Associations extends Component {
       }
 
     return (
+        <React.Fragment>
+          <SiteHelmet page={this.props.location}/>
           <PictureCollection data={data}/>
+        </React.Fragment>
     );
   }
 }
 
 
 
-export default Associations;
+export default  withRouter(Associations);
  

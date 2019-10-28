@@ -134,7 +134,7 @@ class App extends Component {
                   <div style={{textAlign:"center" , backgroundColor:"", height:"100%", overflow:"hidden"}}>
                      <div ref={ scrollbar => { this.scrollbar = scrollbar } }
                                  style={{ width:"100%", height: "100%" }}>
-                      <div id="showcase" style={{ width:"calc(100% - 20px)", height: "100%", margin:"10px"}}>     
+                      <div id="showcase" style={{ width:"calc(100% - 20px)", height: "100%", margin:"10px"}}>   
                        <Route path={homeDir + "/17paintings"} exact component={A17Paintings} />
                        <Route path={homeDir + "/utsav"} component={AUtsav} />
                        <Route path={homeDir + "/painterToMelodies"} component={Pom} />

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class Pom extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class Pom extends Component {
     return (
 
           <div style={{width:"calc(100%- 20px)", margin:"0px", overflow:"auto", padding:"10px" }}>
+            <SiteHelmet page={this.props.location}/>
             <header><h1>Painter to Melodies</h1></header>
             <Container>
               <ImageItem src="img/pom/pom.jpg" style={{width:"100%"}} desc={desc}/>
@@ -36,5 +39,5 @@ const Container = styled.div`
 `
 
 
-export default Pom;
+export default  withRouter(Pom);
  

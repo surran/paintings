@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
 import styled from 'styled-components';
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
+
 
 class About extends Component {
   constructor(props) {
@@ -11,6 +14,7 @@ class About extends Component {
     return (
 
           <div style={{width:"calc(100%- 20px)", margin:"0px", overflow:"auto", padding:"10px" }}>
+            <SiteHelmet page={this.props.location}/>
             <header><h1>Ranjan</h1></header>
             <Container >
               <ImageItem src="img/ranjan.jpg" style={{width:"100%"}} desc="Surya Ranjan Shandil (born 1986) is an Indian artist based in Bengaluru, India."/>
@@ -35,5 +39,5 @@ const Container = styled.div`
   }
 `
 
-export default About;
+export default withRouter(About);
  

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class CommentBook extends Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class CommentBook extends Component {
     const showTranscript = transcript && document.getElementsByTagName("body")[0].clientWidth > 1240
     return (
       <React.Fragment>
+              <SiteHelmet page={this.props.location}/>
               <span style={{position:"fixed", width:"100%", height: "100%", top:"0px", left: "0px", backgroundColor:"black", opacity:"0.75", zIndex:"20"}}>
               </span>
               <ImageFrame>

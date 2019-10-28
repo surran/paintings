@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
 import styled from 'styled-components';
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class A17Paintings extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class A17Paintings extends Component {
 
           <div style={{width:"100%",  padding:"10px", display:"block", boxSizing:"border-box", minHeight:"1000px", margin:"0px"}}>
             <div >
+                <SiteHelmet page={this.props.location}/>
                 <header>
                   <h1>17 Paintings</h1>
                   <p>An Overview</p>
@@ -85,5 +88,5 @@ const Column2 = styled.div`
 `
 
 
-export default A17Paintings;
+export default withRouter(A17Paintings);
  

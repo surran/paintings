@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PictureCollection from "./PictureCollection"
+import { withRouter } from "react-router-dom";
+import {SiteHelmet} from '../components/SiteHelmet'
 
 class Posters extends Component {
   constructor(props) {
@@ -34,12 +36,15 @@ class Posters extends Component {
       }
 
     return (
+        <React.Fragment>
+          <SiteHelmet page={this.props.location}/>
           <PictureCollection data={data}/>
+        </React.Fragment>
     );
   }
 }
 
 
 
-export default Posters;
+export default withRouter(Posters);
   
