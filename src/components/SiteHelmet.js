@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 export const SiteHelmet = (props) => {
 	var {title = "Ranjan | Oil Paintings on Canvas", 
-	       desc = 'Based in Bengaluru, artist Surya Ranjan Shandil brings many worlds into one: A person self taught in art, science  & technology, who believes in the mantra of self reliance. Representative of his background and views, it is no wonder that the underlying theme of his art is "multiplicity"',
+	       desc = 'Surya Ranjan Shandil is an Indian painter based in Bengaluru.',
            image = 'http://www.suryaranjanshandil.com/img/utsavOverview1.png',
            page
 	      } = props
