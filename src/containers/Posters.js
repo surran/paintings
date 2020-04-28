@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PictureCollection from "./PictureCollection"
 import { withRouter } from "react-router-dom";
-import {SiteHelmet} from '../components/SiteHelmet'
+import SiteHelmet from '../components/SiteHelmet'
 
 class Posters extends Component {
   constructor(props) {

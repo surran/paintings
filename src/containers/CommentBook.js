@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { withRouter } from "react-router-dom";
-import {SiteHelmet} from '../components/SiteHelmet'
+import SiteHelmet from '../components/SiteHelmet'
 import {CommentsHead} from '../components/CommentsHead'
 
 class CommentBook extends Component {

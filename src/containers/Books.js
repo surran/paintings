@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ImageItem from '../items/ImageItem'
 import styled from 'styled-components';
 import { withRouter } from "react-router-dom";
-import {SiteHelmet} from '../components/SiteHelmet'
+import SiteHelmet from '../components/SiteHelmet'
 
 class Books extends Component {
   constructor(props) {

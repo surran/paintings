@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars';
 import styled from 'styled-components';
 import { Link} from "react-router-dom";
+import { initializeEvents, pauseEvents, resumeEvents, exitEvent, pageViewEvent } from "./components/eventLogging" 
 
 const IMAGEPATHS = [
 "/img/commentBook/postcard_1.JPG",
@@ -70,8 +71,24 @@ class App extends Component {
      this.setState({menu:false})
   }
 
+  attachTabCHangeListener() {
+    document.addEventListener("visibilitychange", function() {
+      if (document.hidden){
+          pauseEvents()
+      } else {
+          resumeEvents()
+      }
+    });
+    window.addEventListener('beforeunload', function(event) {
+      exitEvent()
+    });
+  }
+
   componentDidMount()
   {
+    initializeEvents()
+    this.attachTabCHangeListener()
+    pageViewEvent()
     //this.scrollbar.scrollTop(0);
   }
 

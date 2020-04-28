@@ -3,7 +3,7 @@ import ImageItem from '../items/ImageItem'
 import { Link} from "react-router-dom";
 import styled from 'styled-components';
 import { withRouter } from "react-router-dom";
-import {SiteHelmet} from '../components/SiteHelmet'
+import SiteHelmet from '../components/SiteHelmet'
 
 class AUtsav extends Component {
   constructor(props) {
